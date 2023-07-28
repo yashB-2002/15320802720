@@ -8,3 +8,24 @@
   margin-top: 10px;
   margin-bottom: 12px;
 }
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 70%;
+  width: 60%;
+  text-align: center;
+}
+inner-container {
+  display: flex;
+}
+h1 {
+  text-align: center;
+}
+.button {
+  margin-top: 7px;
+}
+span {
+  text-decoration: underline;
+}
