@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TableComp from "./TableComp";
+import Navbar from "./Navbar";
 import { apidata } from "./apidata";
 function HomePage() {
   const [res, setRes] = useState(apidata);
@@ -38,6 +39,7 @@ function HomePage() {
   }, []);
   return (
     <div>
+      <Navbar />
       <TableComp />
     </div>
   );
