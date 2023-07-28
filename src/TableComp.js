@@ -2,7 +2,9 @@ import Table from "react-bootstrap/Table";
 import { apidata } from "./apidata";
 import { Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 function BasicExample() {
+  const navigate = useNavigate();
   const [res, setRes] = useState(apidata);
   const [state1, setState1] = useState(false);
   const [state2, setState2] = useState(false);
@@ -77,6 +79,7 @@ function BasicExample() {
             <th>Departure Time</th>
             <th>Seats Available</th>
             <th>Price</th>
+            <th>Information</th>
           </tr>
         </thead>
         <tbody>
@@ -103,6 +106,16 @@ function BasicExample() {
                     "  AND  " +
                     train.price.AC +
                     "(AC COACH)"}
+                </td>
+                   <td>
+                  <Button
+                    onClick={() => {
+                      setQuery(train);
+                      navigate("/train");
+                    }}
+                  >
+                    Know More
+                  </Button>
                 </td>
               </tr>
             );
